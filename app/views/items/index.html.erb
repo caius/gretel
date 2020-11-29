@@ -1,0 +1,13 @@
+<h1>Todo</h1>
+
+<h2>Pending</h2>
+
+<% if @pending_items.empty? %>
+  <p>You have nothing to do, enjoy your day!</p>
+<% else %>
+  <ul>
+    <% @pending_items.each do |item| %>
+      <li><%= input_tag %> <%= item.title %></li>
+    <% end %>
+  </ul>
+<% end %>
